@@ -119,7 +119,7 @@ const Home = () => {
       >
 
         <animated.div style={slideInFromLeftNew} className='landing-title' >
-          <h1 >TEST PK</h1>
+          <h1 >Atiyah-PK</h1>
           <p>"Empowering individuals and communities in pakistan through a dedicated crowdfunding platform, to bridge the financial gap, faster collaboration, and address pressing social causes"</p>
         </animated.div>
 
