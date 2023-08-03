@@ -1,0 +1,677 @@
+.left {
+  width: 99%;
+  height: 44.2rem;
+}
+
+.web-body {
+  display: flex;
+  height: 44.2rem;
+}
+
+.right {
+  width: 42rem;
+  height: 44.2rem;
+  border-left: 1px solid rgba(137, 137, 137, 0.405);
+}
+
+.right img {
+  height: 44.2rem;
+}
+
+.logo img {
+  width: 10rem;
+  height: 10rem;
+  padding-bottom: 0px;
+  display: flex;
+  margin: auto;
+}
+
+.logo-left {
+  display: flex;
+}
+
+.logo-left img {
+  width: 9.5rem;
+  height: 9.5rem;
+  padding-bottom: 0px;
+  display: flex;
+}
+
+.hello {
+  margin: 0px auto;
+}
+
+.hello2 {
+  font-size: 12px;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.third-party {
+  display: flex;
+  justify-content: space-between;
+  width: 10rem;
+  margin-left: 0;
+  margin-bottom: 25px;
+}
+
+.google {
+  background-color: #fef1f1ff;
+  width: 75px;
+  border-radius: 30px;
+}
+
+.google img {
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 6px 26px;
+}
+
+.facebook {
+  background-color: #f3f6fbff;
+  width: 75px;
+  border-radius: 30px;
+}
+
+.facebook img {
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 6px 26px;
+}
+
+.apple {
+  background-color: #f3f4f6ff;
+  width: 75px;
+  border-radius: 30px;
+}
+
+.apple img {
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 6px 26px;
+}
+
+.temp {
+  margin-top: 26px;
+  margin-right: 20px;
+}
+
+.ending {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 2px;
+  font-size: 10px;
+  margin-top: 13px;
+}
+
+.navbar {
+  border-bottom: 1px solid rgba(137, 137, 137, 0.405);
+  padding-bottom: 0;
+  padding-top: 0;
+  display: flex;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 999;
+}
+
+.right-navbar {
+  display: flex;
+  margin-right: 1.7rem;
+}
+
+.logo-navbar {
+  width: 9rem;
+  height: 3rem;
+  margin-right: 2.2rem;
+  margin-top: 2px;
+  margin-left: 1rem;
+}
+
+.navbar2 {
+  display: flex;
+}
+
+.tabs {
+  margin-top: 2px;
+  font-size: x-small;
+}
+
+.search {
+  background-color: #f3f4f6ff;
+  border-radius: 11px;
+  width: 20rem;
+  height: 30px;
+  margin-top: 5px;
+}
+
+.search-icon {
+  height: 1rem;
+  width: 1rem;
+  margin-left: 5px;
+  margin-bottom: 3px;
+}
+
+.notification-logo {
+  margin-right: 0.9rem;
+  margin-left: 2.4rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 8px;
+}
+
+.user-img {
+  width: 40px;
+  height: 40px;
+  margin-top: 4px;
+}
+
+.down {
+  width: 1rem;
+  height: 1rem;
+  margin-top: 7px;
+}
+
+#text-search {
+  background: none;
+  border: none;
+  width: 18rem;
+  padding-left: 7px;
+  padding-top: 2px;
+  outline: none;
+}
+
+.campaign-image {
+  height: 20rem;
+  border-radius: 20px;
+  width: 40rem;
+}
+
+.block {
+  margin-top: 20px;
+  background: #f8f9faff;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 74rem;
+  align-items: center;
+  margin-left: 10rem;
+  border-top: solid rgba(137, 137, 137, 0.405);
+}
+
+.footer-logo {
+  height: 13rem;
+  width: 13rem;
+}
+
+.email-group {
+  display: flex;
+}
+
+.socials {
+  width: 10rem;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.fb-logo,
+.t-logo,
+.li-logo,
+.yt-logo {
+  height: 2rem;
+  width: 2rem;
+}
+
+.products {
+  margin-top: -37px;
+}
+
+.resources {
+  margin-top: -15px;
+}
+
+.company {
+  margin-top: -40px;
+}
+
+.subscribe {
+  margin-left: 15rem;
+}
+
+.subscribe h5 {
+  margin-bottom: 1px;
+}
+
+.subscribe p {
+  font-size: 11px;
+}
+
+.email {
+  border: 1px solid;
+  border-radius: 9px;
+  width: 15rem;
+  margin-right: 10px;
+}
+
+#email {
+  margin-top: 3px;
+  width: 12rem;
+  margin-left: 5px;
+  outline: none;
+  border: none;
+  cursor: auto;
+}
+
+.mail-icon {
+  height: 20px;
+  width: 20px;
+  margin-bottom: 3px;
+  margin-left: 4px;
+}
+
+#subscribe-btn {
+  border-radius: 9px;
+}
+
+.container-center {
+  margin: auto;
+  width: 60rem;
+  margin-top: 3rem;
+  margin-left: 25rem;
+}
+
+.container-cen {
+  display: flex;
+  margin-left: -4rem;
+}
+
+#col {
+  border: 1px solid;
+  margin-left: 1rem;
+  width: 16rem;
+  height: 20rem;
+  border: 1px solid rgba(137, 137, 137, 0.126);
+  border-radius: 20px;
+}
+
+.endorsment-sec {
+  display: flex;
+  flex-direction: column;
+}
+
+.endorsment-sec h6,
+.endorsment-sec p {
+  margin: auto;
+}
+
+.endorsement-btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.endorsement-btn button {
+  width: 14rem;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+@keyframes commentLoop {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.comment-section {
+  width: 40rem;
+  border: 1px solid rgba(137, 137, 137, 0.126);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin-top: 2px;
+  margin-left: -2px;
+  height: 18.8rem;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.comment-section::-webkit-scrollbar {
+  width: 0em;
+}
+
+.comment-section::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.comment-section::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.comment-section h6,
+.comment-section div {
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 17px;
+}
+
+.description {
+  border: 1px solid rgba(137, 137, 137, 0.126);
+  border-radius: 20px;
+  margin: 5px 0;
+  width: 40rem;
+  height: 12rem;
+  overflow-y: auto;
+}
+
+.description::-webkit-scrollbar {
+  width: 0em;
+}
+
+.description::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.description::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.description h6 {
+  font-size: larger;
+}
+
+.description h6,
+.description p {
+  margin-left: 10px;
+  margin-top: 4px;
+  padding-right: 5px;
+}
+
+.recent-donations {
+  width: 15rem;
+  height: 8.3rem;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.comment {
+  display: flex;
+  margin-top: 4px;
+  font-size: small;
+  height: 2.5rem;
+  animation: commentLoop 5s linear infinite;
+}
+
+.comment img {
+  height: 1.2rem;
+  width: 1.2rem;
+  margin: 1px 6px;
+}
+
+.a {
+  font-size: 14px;
+  margin-left: 16px;
+  margin-bottom: 2px;
+}
+
+.donation {
+  display: flex;
+  font-size: small;
+}
+
+.donation img {
+  height: 1.1rem;
+  width: 1.1rem;
+  margin: 1px 6px;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 36.5rem;
+  justify-content: center;
+}
+
+.postal-code {
+  width: 25rem;
+}
+
+.section1-2 {
+  width: 26rem;
+  line-height: 2.5rem;
+  overflow-wrap: initial;
+}
+
+.section1-2 p {
+  border: 1px solid rgba(137, 137, 137, 0.405);
+  border-radius: 20px;
+  display: inline;
+  padding: 4px 10px;
+  margin: 4px 4px;
+}
+
+#continue {
+  display: flex;
+  margin-left: 20rem;
+  margin-top: 5rem;
+}
+
+.section2,
+.section3,
+.section4,
+.section5 {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  margin: auto;
+  height: 36.5rem;
+  justify-content: center;
+}
+
+.section2 h6 {
+  margin: 1.5rem auto;
+}
+
+.section2 button {
+  width: fit-content;
+}
+
+.section2-1 {
+  border: 1px solid rgba(137, 137, 137, 0.405);
+  margin-bottom: 2rem;
+  padding: 15px 15px;
+  line-height: 10px;
+  border-radius: 20px;
+}
+
+.section2-1:hover,
+.section2-1 p:hover {
+  cursor: pointer;
+}
+
+.section2-1:hover {
+  border: 1px solid #24984b;
+}
+
+.section2-1.activeOption {
+  background-color: #24984b;
+  color: white;
+}
+
+.section2-1 p {
+  line-height: normal;
+}
+
+.BTN {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.section4 button {
+  width: fit-content;
+}
+
+.stepper {
+  margin: 0 20px;
+  margin-top: 35px;
+}
+
+.pgbar {
+  width: 14rem;
+  margin: auto;
+  height: 5px;
+}
+
+.pgbar div {
+  background-color: #24984b;
+}
+
+/* Fade-in animation when component enters */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+/* Fade-out animation when component exits */
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+}
+
+.form {
+  overflow: hidden;
+  height: 44rem;
+}
+
+.right-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44rem;
+  font-size: 29px;
+  margin: 0 70px;
+}
+
+.Opt {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Opt p {
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background-color: #fff;
+  transition: background-color 0.2s;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.Opt p.activeOption {
+  background-color: #24984b;
+  color: white;
+}
+
+.Opt p:hover {
+  cursor: pointer;
+  border: 1px solid #24984b;
+}
+
+.radio-input {
+  display: flex;
+  flex-direction: row;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.radio-input input[type='radio'] {
+  display: none;
+}
+
+.radio-input label {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  border-radius: 5px;
+  margin-right: 12px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.radio-input label:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  transition: all 0.3s ease-in-out;
+}
+
+.radio-input input[type='radio']:checked + label:before {
+  background-color: rgb(158, 204, 147);
+  top: 0;
+}
+
+.radio-input input[type='radio']:checked + label {
+  background-color: #117b34;
+  color: #fff;
+  border-color: rgb(158, 204, 147);
+  animation: radio-translate 0.5s ease-in-out;
+}
+
+@keyframes radio-translate {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.Mui-active circle{
+  color: #117b34;
+}
+
+.Mui-completed path {
+    color: #117b34;
+}

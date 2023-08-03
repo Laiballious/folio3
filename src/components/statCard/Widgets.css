@@ -1,0 +1,545 @@
+@media screen and (min-width: 320px) and (max-width: 340px) {
+    .widgetsMain{
+        width: 290px;
+    }
+
+    #widgetsViewMore {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 341px) and (max-width: 701px) {
+    .widgetsMain {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (min-width: 702px) and (max-width: 711px) {
+    .widgetsMain{
+        width: 320px;
+    }
+}
+
+@media screen and (min-width: 712px) and (max-width: 721px) {
+    .widgetsMain {
+        width: 325px;
+    }
+}
+
+@media screen and (min-width: 722px) and (max-width: 731px), (min-width: 1402px) and (max-width: 1421px) {
+    .widgetsMain{
+        width: 330px;
+    }
+}
+
+@media screen and (min-width: 732px) and (max-width: 741px), (min-width: 1422px) and (max-width: 1441px) {
+    .widgetsMain {
+        width: 335px;
+    }
+}
+
+@media screen and (min-width: 742px) and (max-width: 751px), (min-width: 1442px) and (max-width: 1461px) {
+    .widgetsMain{
+        width: 340px;
+    }
+}
+
+@media screen and (min-width: 752px) and (max-width: 761px), (min-width: 1462px) and (max-width: 1481px) {
+    .widgetsMain{
+        width: 345px;
+    }
+} 
+
+@media screen and (min-width: 762px) and (max-width: 771px), (min-width: 1482px) and (max-width: 1501px)  {
+    .widgetsMain{
+        width: 350px;
+    }
+}
+
+@media screen and (min-width: 772px) and (max-width: 784px), (min-width: 1502px) and (max-width: 1521px) {
+    .widgetsMain{
+        width: 355px;
+    }
+}
+
+@media screen and (min-width: 785px) and (max-width: 791px), (min-width: 1522px) and (max-width: 1541px)  {
+    .widgetsMain{
+        width: 360px;
+    }
+}
+
+@media screen and (min-width: 792px) and (max-width: 801px), (min-width: 1542px) and (max-width: 1561px) {
+    .widgetsMain{
+        width: 365px;
+    }
+}
+
+@media screen and (min-width: 802px) and (max-width: 811px), (min-width: 1562px) and (max-width: 1581px) {
+    .widgetsMain{
+        width: 370px;
+    }
+}
+
+@media screen and (min-width: 812px) and (max-width: 821px), (min-width: 1582px) and (max-width: 1601px) {
+    .widgetsMain{
+        width: 375px
+    }
+}
+
+@media screen and (min-width: 822px) and (max-width: 831px), (min-width: 1602px) and (max-width: 1621px) {
+    .widgetsMain{
+        width: 380px
+    }
+}
+
+@media screen and (min-width: 832px) and (max-width: 841px), (min-width: 1622px) and (max-width: 1641px) {
+    .widgetsMain{
+        width: 385px
+    }
+}
+
+@media screen and (min-width: 842px) and (max-width: 851px), (min-width: 1642px) and (max-width: 1661px) {
+    .widgetsMain{
+        width: 390px
+    }
+}
+
+@media screen and (min-width: 852px) and (max-width: 861px), (min-width: 1662px) and (max-width: 1681px) {
+    .widgetsMain{
+        width: 395px
+    }
+}
+
+@media screen and (min-width: 862px) and (max-width: 871px), (min-width: 1682px) and (max-width: 1701px) {
+    .widgetsMain{
+        width: 400px
+    }
+}
+
+@media screen and (min-width: 872px) and (max-width: 881px), (min-width: 1702px) and (max-width: 1721px) {
+    .widgetsMain{
+        width: 405px
+    }
+}
+
+@media screen and (min-width: 882px) and (max-width: 891px), (min-width: 1722px) and (max-width: 1741px) {
+    .widgetsMain{
+        width: 410px
+    }
+}
+
+@media screen and (min-width: 892px) and (max-width: 901px), (min-width: 1742px) and (max-width: 1761px) {
+    .widgetsMain{
+        width: 415px
+    }
+}
+
+@media screen and (min-width: 902px) and (max-width: 911px), (min-width: 1762px) and (max-width: 1781px) {
+    .widgetsMain{
+        width: 420px
+    }
+}
+
+@media screen and (min-width: 912px) and (max-width: 921px), (min-width: 1782px) and (max-width: 1801px) {
+    .widgetsMain{
+        width: 425px
+    }
+}
+
+@media screen and (min-width: 922px) and (max-width: 931px), (min-width: 1802px) and (max-width: 1821px) {
+    .widgetsMain{
+        width: 430px
+    }
+}
+
+@media screen and (min-width: 932px) and (max-width: 941px), (min-width: 1822px) and (max-width: 1841px) {
+    .widgetsMain{
+        width: 435px
+    }
+}
+
+@media screen and (min-width: 942px) and (max-width: 951px), (min-width: 1842px) and (max-width: 1861px) {
+    .widgetsMain{
+        width: 440px
+    }
+}
+@media screen and (min-width: 952px) and (max-width: 961px), (min-width: 1862px) and (max-width: 1881px) {
+    .widgetsMain{
+        width: 445px
+    }
+}
+@media screen and (min-width: 962px) and (max-width: 971px), (min-width: 1882px) and (max-width: 1901px) {
+    .widgetsMain{
+        width: 450px
+    }
+}
+@media screen and (min-width: 972px) and (max-width: 981px), (min-width: 1902px) and (max-width: 1921px) {
+    .widgetsMain{
+        width: 455px
+    }
+}
+@media screen and (min-width: 982px) and (max-width: 991px), (min-width: 1922px) and (max-width: 1941px) {
+    .widgetsMain{
+        width: 460px
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1001px), (min-width: 1942px) and (max-width: 1961px) {
+    .widgetsMain{
+        width: 465px
+    }
+}
+@media screen and (min-width: 1002px) and (max-width: 1011px), (min-width: 1962px) and (max-width: 1981px) {
+    .widgetsMain{
+        width: 470px
+    }
+}
+
+@media screen and (min-width: 1012px) and (max-width: 1021px), (min-width: 1982px) and (max-width: 2001px) {
+    .widgetsMain{
+        width: 475px
+    }
+}
+
+@media screen and (min-width: 1022px) and (max-width: 1031px), (min-width: 2002px) and (max-width: 2021px)  {
+    .widgetsMain{
+        width: 480px
+    }
+}
+
+@media screen and (min-width: 2022px) and (max-width: 2041px) {
+    .widgetsMain{
+        width: 485px
+    }
+}
+
+@media screen and (min-width: 1032px) and (max-width: 1038px) {
+    .widgetsMain{
+        width: 486px
+    }
+}
+
+@media screen and (min-width: 1039px) and (max-width: 1050px), (min-width: 2042px) and (max-width: 2061px) {
+    .widgetsMain{
+        width: 490px
+    }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1058px), (min-width: 2062px) and (max-width: 2081px) {
+    .widgetsMain{
+        width: 495px;
+    }
+}
+
+@media screen and (min-width: 1059px) and (max-width: 1071px), (min-width: 2082px) and (max-width: 2101px) {
+    .widgetsMain{
+        width: 500px;
+    }
+}
+
+@media screen and (min-width: 2102px) and (max-width: 2141px)  {
+    .widgetsMain{
+        width: 505px;
+    }
+}
+
+@media screen and (min-width: 1072px) and (max-width: 1081px) {
+    .widgetsMain{
+        width: 505px;
+    }
+}
+
+@media screen and (min-width: 1082px) and (max-width: 1091px), (min-width: 2142px) and (max-width: 2161px) {
+    .widgetsMain{
+        width: 510px;
+    }
+}
+
+@media screen and (min-width: 1092px) and (max-width: 1101px), (min-width: 2162px) and (max-width: 2181px) {
+    .widgetsMain{
+        width: 515px;
+    }
+}
+
+@media screen and (min-width: 1102px) and (max-width: 1111px), (min-width: 2182px) and (max-width: 2201px) {
+    .widgetsMain {
+        width: 520px;
+    }
+}
+
+@media screen and (min-width: 1112px) and (max-width: 1121px), (min-width: 2202px) and (max-width: 2221px) {
+    .widgetsMain {
+        width: 525px;
+    }
+}
+
+@media screen and (min-width: 1122px) and (max-width: 1131px), (min-width: 2222px) and (max-width: 2241px) {
+    .widgetsMain {
+        width: 530px;
+    }
+}
+
+@media screen and (min-width: 1132px) and (max-width: 1141px), (min-width: 2242px) and (max-width: 2261px) {
+    .widgetsMain {
+        width: 535px;
+    }
+}
+
+@media screen and (min-width: 1142px) and (max-width: 1151px), (min-width: 2262px) and (max-width: 2281px) {
+    .widgetsMain {
+        width: 540px;
+    }
+}
+
+@media screen and (min-width: 1152px) and (max-width: 1162px), (min-width: 2282px) and (max-width: 2301px) {
+    .widgetsMain {
+        width: 545px;
+    }
+}
+
+@media screen and (min-width: 1163px) and (max-width: 1181px) {
+    .widgetsMain {
+        width: 270px;
+    }
+
+    #widgetsViewMore {
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-width: 1182px) and (max-width: 1201px) {
+    .widgetsMain {
+        width: 275px;
+    }
+
+    #widgetsViewMore {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1202px) and (max-width: 1221px) {
+    .widgetsMain {
+        width: 280px;
+    }
+
+    #widgetsViewMore {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1222px) and (max-width: 1241px) {
+    .widgetsMain {
+        width: 285px;
+    }
+
+    #widgetsViewMore {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1242px) and (max-width: 1261px) {
+    .widgetsMain {
+        width: 290px;
+    }
+    #widgetsViewMore {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1262px) and (max-width: 1281px) {
+    .widgetsMain {
+        width: 295px;
+    }
+}
+
+@media screen and (min-width: 1282px) and (max-width: 1301px) {
+    .widgetsMain {
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 1302px) and (max-width: 1321px) {
+    .widgetsMain {
+        width: 305px;
+    }
+}
+
+@media screen and (min-width: 1322px) and (max-width: 1341px) {
+    .widgetsMain {
+        width: 310px;
+    }
+}
+
+@media screen and (min-width: 1342px) and (max-width: 1361px) {
+    .widgetsMain {
+        width: 315px;
+    }
+}
+
+@media screen and (min-width: 1362px) and (max-width: 1381px) {
+    .widgetsMain {
+        width: 320px;
+    }
+}
+
+@media screen and (min-width: 1382px) and (max-width: 1401px) {
+    .widgetsMain {
+        width: 325px;
+    }
+}
+
+@media screen and (min-width: 2302px) and (max-width: 2351px) {
+    .widgetsMain {
+        width: 550px;
+    }
+} 
+
+@media screen and (min-width: 2352px) and (max-width: 2403px) {
+    .widgetsMain {
+        width: 565px;
+    }
+} 
+
+@media screen and (min-width: 2404px) and (max-width: 2455px) {
+    .widgetsMain {
+        width: 575px;
+    }
+} 
+
+@media screen and (min-width: 2456px) and (max-width: 2504px) {
+    .widgetsMain {
+        width: 590px;
+    }
+} 
+
+@media screen and (min-width: 2505px) and (max-width: 2555px) {
+    .widgetsMain {
+        width: 600px;
+    }
+} 
+
+@media screen and (min-width: 2556px) and (max-width: 2603px) {
+    .widgetsMain {
+        width: 610px;
+    }
+} 
+
+@media screen and (min-width: 2604px) and (max-width: 2655px) {
+    .widgetsMain {
+        width: 620px;
+    }
+} 
+
+@media screen and (min-width: 2656px) and (max-width: 2705px) {
+    .widgetsMain {
+        width: 640px;
+    }
+} 
+
+@media screen and (min-width: 2706px) and (max-width: 2756px) {
+    .widgetsMain {
+        width: 650px;
+    }
+} 
+
+@media screen and (min-width: 2757px) and (max-width: 2805px) {
+    .widgetsMain {
+        width: 665px;
+    }
+} 
+
+@media screen and (min-width: 2806px) and (max-width: 2855px) {
+    .widgetsMain {
+        width: 675px;
+    }
+} 
+
+@media screen and (min-width: 2856px) and (max-width: 2907px) {
+    .widgetsMain {
+        width: 690px;
+    }
+} 
+
+@media screen and (min-width: 2908px) and (max-width: 2955px) {
+    .widgetsMain {
+        width: 700px;
+    }
+} 
+
+@media screen and (min-width: 2956px) and (max-width: 3005px) {
+    .widgetsMain {
+        width: 710px;
+    }
+} 
+
+@media screen and (min-width: 3006px) and (max-width: 3057px) {
+    .widgetsMain {
+        width: 720px;
+    }
+} 
+
+@media screen and (min-width: 3058px) and (max-width: 3105px) {
+    .widgetsMain {
+        width: 730px;
+    }
+} 
+
+@media screen and (min-width: 3106px) and (max-width: 3159px) {
+    .widgetsMain {
+        width: 745px;
+    }
+} 
+
+@media screen and (min-width: 3160px) and (max-width: 3207px) {
+    .widgetsMain {
+        width: 760px;
+    }
+} 
+
+@media screen and (min-width: 3208px) and (max-width: 3307px){
+    .widgetsMain {
+        width: 760px;
+    }
+} 
+
+@media screen and (min-width: 3308px) and (max-width: 3611px){
+    .widgetsMain {
+        width: 800px;
+    }
+} 
+
+@media screen and (min-width: 3612px) and (max-width: 3913px){
+    .widgetsMain {
+        width: 875px;
+    }
+} 
+
+@media screen and (min-width: 3914px) and (max-width: 4215px){
+    .widgetsMain {
+        width: 950px;
+    }
+} 
+
+@media screen and (min-width: 4216px) and (max-width: 4516px){
+    .widgetsMain {
+        width: 1030px;
+    }
+} 
+
+@media screen and (min-width: 4517px) and (max-width: 4799px){
+    .widgetsMain {
+        width: 1100px;
+    }
+} 
+
+@media screen and (min-width: 4800px) and (max-width: 6399px) {
+    .widgetsMain {
+        width: 1160px;
+    }
+} 
+
+@media screen and (min-width: 6400px) {
+    .widgetsMain {
+        width: 1550px;
+    }
+} 

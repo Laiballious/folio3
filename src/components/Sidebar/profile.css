@@ -1,0 +1,4 @@
+.profile-popover > .MuiPaper-root {
+    bottom: 85px !important;
+    top: auto !important;
+}
