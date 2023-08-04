@@ -7,6 +7,7 @@ import Tabs from '@mui/material/Tabs';
 import "./Navbar.css"
 import logo from "../../Assets/logos/1.png"
 import menuIcon from "../../Assets/logos/menu.png"
+import { NavLink } from 'react-router-dom';
 import { Link } from "react-router-dom"
 const Navbar = (props, to) => {
   const [value, setValue] = React.useState(0);
@@ -29,7 +30,7 @@ const Navbar = (props, to) => {
     <div className='navbar'>
 
       <div className='desk-tab'>
-        <Tabs className='tabs' >
+        <Tabs className='tabs' style={{ marginTop: '-12px' }}>
           <img className='main-logo' src={logo} alt={logo} />
           {props.link1}
           {props.link4}
@@ -63,6 +64,11 @@ const Navbar = (props, to) => {
           <MenuItem onClick={handleClose}>{props.link3}</MenuItem>
           <MenuItem onClick={handleClose}>{props.link4}</MenuItem>
           <MenuItem onClick={handleClose}>{props.link7}</MenuItem>
+
+          <MenuItem style={{ position: 'relative', bottom: "50px", marginLeft: "17px" }} onClick={handleClose}>{props.login}</MenuItem>
+
+          <MenuItem style={{ position: 'relative', bottom: "50px", marginLeft: "17px" }} onClick={handleClose}>{props.signup}</MenuItem>
+
         </Menu>
       </div>
 

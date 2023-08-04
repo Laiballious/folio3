@@ -8,6 +8,8 @@ export const ENDPOINTS = {
     VERIFY_OTP :'/verifyOTP',
     UPDATE_PASSWORD: '/resetPass',
     GET_CAMAPIGN: 'common/campaign/',
+    UPDATE_PROFILE: "common/updateProfile/",
+    RESET_PASSWORD: "common/UpdatePassword/",
 
 // Receiver
     CREATE_CAMPAIGN: "/receiver/createCampagin",
@@ -18,5 +20,6 @@ export const ENDPOINTS = {
     GET_ALL_CAMAPIGNS : "/donor/campaigns",
     DONATE_NOW : "/donor/donate/",
     DONATION : "/donor/donatedcampaign",
+    MY_DONATIONS: "donor/donatedcampaign/"
 
   };

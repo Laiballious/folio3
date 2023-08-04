@@ -16,3 +16,34 @@ export function GetCampagin(id) {
         return;
     });
 }
+
+
+export function UpdateProfile(payload) {
+  return Api.put(ENDPOINTS.UPDATE_PROFILE+payload.id,payload)
+    .then(response => {
+      if (response?.data.success === true) {
+        toast.success('Profile updated successfully!');
+        return response;
+      }
+    })
+    .catch(error => {
+        toast.error(error?.response.data.message);
+        return;
+    });
+}
+
+
+export function UpdatePassword(payload) {
+  console.log(payload)
+  return Api.post(ENDPOINTS.RESET_PASSWORD+payload.id,payload)
+    .then(response => {
+      if (response?.data.success === true) {
+        toast.success('Password has been Updated!');
+        return response;
+      }
+    })
+    .catch(error => {
+        toast.error(error?.response.data.message);
+        return;
+    });
+}

@@ -12,11 +12,11 @@ export default function Footer() {
     return (
         <>
             <div className="main-foot">
-                <div className="footer-box" style={{ backgroundColor: "white", marginTop: "20px", border: "none", display: "flex", justifyContent: "space-around", width: "100%" }} >
+                <div className="footer-box" style={{ backgroundColor: "white", border: "none", display: "flex", width: "2rem" }} >
                     <div>
                         <img src={Logo} alt="logo" className="footer-logo" />
                     </div>
-                    <div className="main-footer-contents">
+                    {/* <div className="main-footer-contents">
                         <div className="footer-contents">
                             <h6>Products</h6>
                             <p>Features</p>
@@ -33,8 +33,8 @@ export default function Footer() {
                             <p>About</p>
                             <p>Join Us</p>
                         </div>
-                    </div>
-                    <div>
+                    </div> */}
+                    {/* <div>
                         <div >
                             <h5>Subscribe to our Newsletter</h5>
                             <p>For Product annoucments and exclusive insights</p>
@@ -46,9 +46,8 @@ export default function Footer() {
                                 <Button variant="contained" id="subscribe-btn" style={{ background: '#117b34' }}>Subscribe</Button>
                             </div>
                             <br />
-
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="footer-copyright-content">
                     <div>
@@ -57,7 +56,7 @@ export default function Footer() {
                         </select>
                     </div>
                     <div>
-                        <h6>©2023 Atiyah Ltd . Privacy . Terms . sidemap</h6>
+                        <h6 style={{fontFamily: 'Playball'}}>©2023 Atiyah Ltd . Privacy . Terms . sidemap</h6>
                     </div>
                     <div className="footer-icon">
                         <img src={Twitter_bw} alt="" className="t-logo" />

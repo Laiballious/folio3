@@ -1,115 +1,185 @@
-import "./card.css"
-import React from 'react'
-
+import "./card.css";
+import React from 'react';
 import Card from '@mui/material/Card';
-import starIcon from "../../Assets/card_image/star.png"
+import starIcon from "../../Assets/card_image/star.png";
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import DonateBtn from "../DonateBtn/DonateBtn";
-import { useNavigate ,Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import Button from "../button/button";
 
 const Cards = ({ data }) => {
-  const navigate = useNavigate();
-      if (!data) {
-        return <div>Loading...</div>; // You can show a loading state while waiting for data.
-      }
+    const navigate = useNavigate();
     
+    if (!data) {
+        return <div>Loading...</div>;
+    }
+
+    const handleCardClick = (campaignId) => {
+        navigate(`/campaign-details/${campaignId}`);
+    };
+
+    const handleDonateBtnClick = (campaignId, e) => {
+        e.stopPropagation(); // Stop the click event from propagating to the card
+        navigate(`/donation/${campaignId}`);
+    };
+
+    const handleViewDetailsBtnClick = (campaignId, e) => {
+        e.stopPropagation(); // Stop the click event from propagating to the card
+        navigate(`/campaign-details/${campaignId}`);    };
+
     return (
         <div className="cards">
             {data.map((item) => (
-                // <a href="campaign">
-                <Link key={item._id} to={`/campaign-details/${item._id}`}
-                style={{ textDecoration: "none", color: "inherit" }}>
-               <Card className="card" sx={{ maxWidth: 345 }}>
-                    
+                <Card className="card" key={item._id} sx={{ maxWidth: 345 }} onClick={() => handleCardClick(item._id)}>
                     <img className="card-img" src={item.ImageURL} alt="card image" loading="lazy" />
                     <CardContent>
-
                         <Typography gutterBottom variant="h5" component="div">
                             {item.campaign}
                         </Typography>
-
-                        <Typography variant="body2" color="text.secondary">
-                            {/* {item.description} */}
+                        <Typography variant="body2" color="text.secondary" style={{fontFamily: 'Playfair Display SC', fontWeight: "bold"}}>
                             {`${item.description.split(" ").slice(0, 10).join(" ")} ...`}
                         </Typography>
                         <div className="card-btn">
-                            <DonateBtn />
+                            <Button onClick={(e) => handleDonateBtnClick(item._id, e)} BGcolor="#117b34" color="#ffffff" children="Donate Now" fontSize="14px" width="105px" height="30px"/>
+                            <Button onClick={(e) => handleViewDetailsBtnClick(item._id, e)} children="View Details" fontSize="14px" width="105px" height="30px" />
                         </div>
                     </CardContent>
                     <CardActions>
                         <div className="card-rating-request">
                             <div className="card-rating">
                                 <img className="star-icon" src={starIcon} alt="icon" />
-                                <h6 className="card-font">{item.endosment ? item.endosment: 0}</h6>
+                                <h6 className="card-font" style={{marginLeft: '5px', fontFamily: 'Cinzel'}}>{item.endorsement ? item.endorsement : 0}</h6>
                             </div>
-                            <h6 className="card-font">{item.amountNeeded}</h6>
+                            <h6 className="card-font" style={{fontFamily: 'Cinzel'}}>{item.amountNeeded}</h6>
                         </div>
                     </CardActions>
-                </Card> </Link>
-            ))
-
-            }
+                </Card>
+            ))}
         </div>
-    )
+    );
 }
 
-export default Cards
+export default Cards;
 
-
-// import React from "react";
-// import { Link, useLocation } from "react-router-dom";
-// import Card from "@mui/material/Card";
+// import "./card.css";
+// import React from 'react';
+// import Card from '@mui/material/Card';
 // import starIcon from "../../Assets/card_image/star.png";
-// import CardActions from "@mui/material/CardActions";
-// import CardContent from "@mui/material/CardContent";
-// import Typography from "@mui/material/Typography";
+// import CardActions from '@mui/material/CardActions';
+// import CardContent from '@mui/material/CardContent';
+// import Typography from '@mui/material/Typography';
 // import DonateBtn from "../DonateBtn/DonateBtn";
-
+// import { useNavigate } from 'react-router-dom';
+// import Button from "../button/button";
 // const Cards = ({ data }) => {
-//   const location = useLocation();
-//   console.log("Current Location State:", location.state);
+//     const navigate = useNavigate();
+    
+//     if (!data) {
+//         return <div>Loading...</div>;
+//     }
 
-//   if (!data) {
-//     return <div>Loading...</div>; // You can show a loading state while waiting for data.
-//   }
+//     const handleCardClick = (itemId) => {
+//         navigate(`/campaign-details/${itemId}`);
+//     };
 
-//   return (
-//     <div className="cards">
-//       {data.map((item) => (
-//         <Card key={item.id} className="card" sx={{ maxWidth: 345 }}>
-//         <Link key={item._id} to={`/details/${item._id}`}
-//                     style={{ textDecoration: "none", color: "inherit" }}
-//         >
+//     const handleBtnClick = (itemId, e) => {
+//         e.stopPropagation(); // Stop the click event from propagating to the card
+//         navigate(`/donation/${itemId}`);
+//     };
 
-//             {/* Use the Link component from React Router to handle redirection */}
-//             <img className="card-img" src={item.images} alt="card image" />
-//             <CardContent>
-//               <Typography gutterBottom variant="h5" component="div">
-//                 {item.campaign}
-//               </Typography>
-//               <Typography variant="body2" color="text.secondary">
-//                 {`${item.description.split(" ").slice(0, 10).join(" ")} ...`}
-//               </Typography>
-//               <div className="card-btn">
-//                 <DonateBtn />
-//               </div>
-//             </CardContent>
-//           </Link>
-//           <CardActions>
-//             <div className="card-rating-request">
-//               <div className="card-rating">
-//                 <img className="star-icon" src={starIcon} alt="icon" />
-//                 <h6 className="card-font">{item.endorsement ? item.endorsement : 0}</h6>
-//               </div>
-//               <h6 className="card-font">{item.amountNeeded}</h6>
-//             </div>
-//           </CardActions>
-//         </Card>
-//       ))}
-//     </div>
-//   );
-// };
+//     return (
+//         <div className="cards">
+//             {data.map((item) => (
+//                 <Card className="card" key={item._id} sx={{ maxWidth: 345 }} onClick={() => handleCardClick(item._id)}>
+//                     <img className="card-img" src={item.ImageURL} alt="card image" loading="lazy" />
+//                     <CardContent>
+//                         <Typography gutterBottom variant="h5" component="div">
+//                             {item.campaign}
+//                         </Typography>
+//                         <Typography variant="body2" color="text.secondary">
+//                             {`${item.description.split(" ").slice(0, 10).join(" ")} ...`}
+//                         </Typography>
+//                         <div className="card-btn" >
+//                             <Button BGcolor="#117b34" color="#ffffff" children="Donate Now" width ="150px" height = "30px"/>
+//                             <Button  children="View Details" width ="150px" height = "30px"/>
+//                             {/* <Button onClick, children ,width,height /> */}
+//                         </div>
+//                     </CardContent>
+//                     <CardActions>
+//                         <div className="card-rating-request">
+//                             <div className="card-rating">
+//                                 <img className="star-icon" src={starIcon} alt="icon" />
+//                                 <h6 className="card-font">{item.endorsement ? item.endorsement : 0}</h6>
+//                             </div>
+//                             <h6 className="card-font">{item.amountNeeded}</h6>
+//                         </div>
+//                     </CardActions>
+//                 </Card>
+//             ))}
+//         </div>
+//     );
+// }
 
 // export default Cards;
+
+
+// // import "./card.css"
+// // import React from 'react'
+
+// // import Card from '@mui/material/Card';
+// // import starIcon from "../../Assets/card_image/star.png"
+// // import CardActions from '@mui/material/CardActions';
+// // import CardContent from '@mui/material/CardContent';
+// // import Typography from '@mui/material/Typography';
+// // import DonateBtn from "../DonateBtn/DonateBtn";
+// // import { useNavigate ,Link } from 'react-router-dom';
+
+// // const Cards = ({ data }) => {
+// //   const navigate = useNavigate();
+// //       if (!data) {
+// //         return <div>Loading...</div>; // You can show a loading state while waiting for data.
+// //       }
+    
+// //     return (
+// //         <div className="cards">
+// //             {data.map((item) => (
+// //                 // <a href="campaign">
+// //                 <Link key={item._id} to={`/campaign-details/${item._id}`}
+// //                 style={{ textDecoration: "none", color: "inherit" }}>
+// //                <Card className="card" sx={{ maxWidth: 345 }}>
+                    
+// //                     <img className="card-img" src={item.ImageURL} alt="card image" loading="lazy" />
+// //                     <CardContent>
+
+// //                         <Typography gutterBottom variant="h5" component="div">
+// //                             {item.campaign}
+// //                         </Typography>
+
+// //                         <Typography variant="body2" color="text.secondary">
+// //                             {/* {item.description} */}
+// //                             {`${item.description.split(" ").slice(0, 10).join(" ")} ...`}
+// //                         </Typography>
+// //                         <div className="card-btn">
+// //                             <DonateBtn />
+// //                         </div>
+// //                     </CardContent>
+// //                     <CardActions>
+// //                         <div className="card-rating-request">
+// //                             <div className="card-rating">
+// //                                 <img className="star-icon" src={starIcon} alt="icon" />
+// //                                 <h6 className="card-font">{item.endosment ? item.endosment: 0}</h6>
+// //                             </div>
+// //                             <h6 className="card-font">{item.amountNeeded}</h6>
+// //                         </div>
+// //                     </CardActions>
+// //                 </Card> </Link>
+// //             ))
+
+// //             }
+// //         </div>
+// //     )
+// // }
+
+// // export default Cards
+

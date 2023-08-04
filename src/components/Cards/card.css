@@ -22,9 +22,10 @@
 }
 
 .card-btn {
-  width: 100%;
+  margin: 10px;
+  width: 95%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
 }
 
 .star-icon {

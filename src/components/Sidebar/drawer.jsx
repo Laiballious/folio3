@@ -3,7 +3,6 @@ import Drawer from "@mui/material/Drawer";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-// import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
 import { useState } from "react";
 import Logo from "../../Assets/transparent/1.png";
@@ -23,7 +22,7 @@ const Sidebar = ({ data }) => {
           style={{ borderRadius: "50%", width: "100%", height: "100%" }}
         />
       </div>
-      <div style={{ width: 200, margin: "0 auto" }}>
+      <div style={{ fontFamily: 'Playball', width: 220, margin: "0 auto" }}>
         {data.map((item, index) => (
           < ListItem
             button
@@ -36,11 +35,12 @@ const Sidebar = ({ data }) => {
               padding: "20px 16px",
             }}
             onClick={() => {
-              if (item.name === 'Dashboard' ||item.name === 'Donors' || item.name === 'Client' ||item.name === 'Profit' ||item.name === 'Setting') {
+              if (item.name === 'Dashboard' || item.name === 'Donors' || item.name === 'Client' || item.name === 'Profit') {
                 navigate(`/admin/${item.path}`)
-              }else if(item.name === 'My Campaigns' || item.name === 'Home' ){
-                navigate(`/receiverDashboard/${item.path}`)
+              } else if (item.name === 'My Campaigns' || item.name === 'Home') {
+                navigate(`/receiver/${item.path}`)
               }
+              console.log(item.path + " " + item.name + " " + index)
             }}
           >
             <ListItemIcon style={{ color: item.color }}>
@@ -70,7 +70,6 @@ const Sidebar = ({ data }) => {
             <Profile />
           </div>
         </div>
-
       </Drawer>
     </>
   );

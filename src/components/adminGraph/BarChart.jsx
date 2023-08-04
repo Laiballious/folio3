@@ -6,80 +6,50 @@ import { useTheme } from '@mui/material/styles';
 // third-party
 import ReactApexChart from 'react-apexcharts';
 
-// chart options
 const barChartOptions = {
-  chart: {
-    type: 'bar',
-    height: 365,
-    toolbar: {
-      show: false
-    }
-  },
-  plotOptions: {
-    bar: {
-      columnWidth: '45%',
-      borderRadius: 4
-    }
-  },
-  dataLabels: {
-    enabled: false
-  },
   xaxis: {
-    categories: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
-    axisBorder: {
-      show: false
-    },
-    axisTicks: {
-      show: false
-    }
+    categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
   },
-  yaxis: {
-    show: false
-  },
-  grid: {
-    show: false
-  }
+};
+const fillNullValues = (data) => {
+  const filledData = Array(7).fill(null);
+  data.forEach((value, index) => {
+    filledData[index] = value;
+  });
+  return filledData;
 };
 
-// ==============================|| MONTHLY BAR CHART ||============================== //
-
-const MonthlyBarChart = () => {
+const DailyBarChart = ({ dailyDonationData }) => {
   const theme = useTheme();
+  const { info } = theme.palette;
 
-  const { primary, secondary } = theme.palette.text;
-  const info = theme.palette.info.light;
-
-  const [series] = useState([
-    {
-      data: [80, 95, 70, 42, 65, 55, 78]
-    }
-  ]);
+  const [series, setSeries] = useState([{ data: [] }]); // Initialize with an empty array
 
   const [options, setOptions] = useState(barChartOptions);
 
   useEffect(() => {
+    if (dailyDonationData) {
+      const filledData = fillNullValues(dailyDonationData);
+      setSeries([{ data: filledData }]);
+    }
+    
     setOptions((prevState) => ({
       ...prevState,
-      colors: [info],
-      xaxis: {
-        labels: {
-          style: {
-            colors: [secondary, secondary, secondary, secondary, secondary, secondary, secondary]
-          }
-        }
-      },
-      tooltip: {
-        theme: 'light'
-      }
+      colors: [info.light],
+      // ...other options...
     }));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [primary, info, secondary]);
+  }, [info, dailyDonationData]);
+
+  if (!dailyDonationData) {
+    // Return a loading state or placeholder here
+    return <div>Loading...</div>;
+  }
 
   return (
-    <div >
-      <ReactApexChart options={options} series={series} type="bar" width={'600px'} />
+    <div>
+      <ReactApexChart options={options} series={series} type="bar" width="100%" height={365} />
     </div>
   );
 };
 
-export default MonthlyBarChart;
+export default DailyBarChart;

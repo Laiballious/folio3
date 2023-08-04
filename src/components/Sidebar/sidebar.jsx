@@ -44,7 +44,6 @@ const Sidebar = () => {
         position: 'relative',
         fontWeight: 'bold',
         color: '#B1171AFF',
-        // background: '#F9CECFFF',
         background: "#117b34"
     };
 

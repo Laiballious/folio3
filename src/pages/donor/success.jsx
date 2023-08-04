@@ -11,10 +11,11 @@ import Container from '@mui/material/Container';
 import img from "../../Assets/jpeg/child.jpg";
 import img2 from "../../Assets/transparent/1.png";
 
-
+import { useNavigate } from 'react-router-dom';
 export default function ThankYouPage() {
+  const navigate = useNavigate();
   const handleBackClick = () => {
-    // Handle back button click here
+    navigate(-1)
   };
 
   return (
@@ -38,12 +39,12 @@ export default function ThankYouPage() {
             </div>
 
             {/* Thank you message */}
-            <Typography variant="h3" component="div" gutterBottom style={{ textAlign: 'center', fontWeight: 'bold', marginTop: '2rem', color: 'black' }}>
+            <Typography variant="h3" component="div" gutterBottom style={{ textAlign: 'center', fontWeight: 'bold', marginTop: '2rem', color: 'black', fontFamily: 'Tektur' }}>
               All done, Thank you for helping username!
             </Typography>
 
             {/* Today's Date */}
-            <Typography variant="h5" component="div" gutterBottom style={{ textAlign: 'center', color: 'black' }}>
+            <Typography variant="h5" component="div" gutterBottom style={{ textAlign: 'center', color: 'black', fontFamily: 'Tektur' }}>
               Today's Date: {new Date().toLocaleDateString()}
             </Typography>
 
@@ -51,7 +52,7 @@ export default function ThankYouPage() {
             <Divider style={{ margin: '2rem 0' }} />
 
             {/* Amount Paid */}
-            <Typography variant="h6" component="div" gutterBottom style={{ color: 'black', fontWeight: 'bold' }}>
+            <Typography variant="h6" component="div" gutterBottom style={{ color: 'black', fontWeight: 'bold', fontFamily: 'Tektur' }}>
               Amount Paid: $100
             </Typography>
 
@@ -62,10 +63,10 @@ export default function ThankYouPage() {
             <div style={{ display: 'flex', alignItems: 'center' }}>
               <img src={img} alt="Campaign_description" style={{ marginRight: '20px', width: '150px', height: 'auto' }} />
               <div>
-                <Typography variant="h5" component="div" gutterBottom style={{ color: 'black', fontWeight: 'bold' }}>
+                <Typography variant="h5" component="div" gutterBottom style={{ color: 'black', fontWeight: 'bold', fontFamily: 'Tektur' }}>
                   Title
                 </Typography>
-                <Typography variant="h6" component="div" gutterBottom style={{ color: 'black' }}>
+                <Typography variant="h6" component="div" gutterBottom style={{ color: 'black', fontFamily: 'Tektur' }}>
                   Subtitle
                 </Typography>
               </div>
@@ -75,10 +76,10 @@ export default function ThankYouPage() {
 
         {/* Footer */}
         <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-          <Typography variant="subtitle1" component="div" style={{ color: 'black', fontSize: '0.9rem' }}>
+          <Typography variant="subtitle1" component="div" style={{ color: 'black', fontSize: '0.9rem', fontFamily: 'Playball' }}>
             &copy; {new Date().getFullYear()} AtiyahPK. All rights reserved.
           </Typography>
-          <Typography variant="subtitle1" component="div" style={{ color: 'black', fontSize: '0.9rem' }}>
+          <Typography variant="subtitle1" component="div" style={{ color: 'black', fontSize: '0.9rem', fontFamily: 'Playball' }}>
             Company Address, Karachi, Pakistan
           </Typography>
         </div>

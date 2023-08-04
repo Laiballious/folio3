@@ -6,7 +6,7 @@ const Comment = ({ comments }) => {
     <>
       {comments.map((item, index) => {
         return (
-          <div
+          <div div
             key={index}
             style={{
               display: "flex",
@@ -34,13 +34,14 @@ const Comment = ({ comments }) => {
               // onClick={handleNameClick}
               />
             </div>
-            <div            key={item._id}>
+            <div key={item._id}>
               <h6
                 style={{
                   fontSize: "14px",
                   cursor: "pointer",
                   display: "block",
                   margin: "0px",
+                  fontFamily: 'Edu SA Beginner'
                 }}
               // onClick={handleNameClick}
               >
@@ -52,6 +53,7 @@ const Comment = ({ comments }) => {
                   color: "#6e6b6a",
                   cursor: "pointer",
                   margin: "0px",
+                  fontFamily: 'Edu SA Beginner'
                 }}
               >
                 {item.text}

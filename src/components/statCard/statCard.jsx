@@ -5,20 +5,20 @@ import { Grid, Stack, Typography } from '@mui/material';
 // ==============================|| STATISTICS - ECOMMERCE CARD  ||============================== //
 
 const StatCard = ({ color, title, count, icon }) => (
-    <>
+  <>
     <Stack spacing={0.5}>
-      <Typography variant="h5" color="textSecondary">
+      <Typography variant="h5" color="textSecondary" style={{ fontFamily: 'Zilla Slab' }}>
         {title}
       </Typography>
       <Grid container alignItems="center">
         <Grid item>
-          <Typography variant="h5" color="inherit">
+          <Typography variant="h5" color="inherit" style={{ fontFamily: 'Zilla Slab' }}>
             {icon} {count}
           </Typography>
         </Grid>
       </Grid>
     </Stack>
-</>
+  </>
 );
 
 StatCard.propTypes = {
