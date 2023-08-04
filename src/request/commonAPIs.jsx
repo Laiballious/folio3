@@ -47,3 +47,18 @@ export function UpdatePassword(payload) {
         return;
     });
 }
+
+
+
+export function ViewAllCampaigns() {
+  return Api.get(ENDPOINTS.VIEW_ALL_CAMPAIGNS)
+    .then(response => {
+      if (response?.data.success === true) {
+        return response;
+      }
+    })
+    .catch(error => {
+        toast.error(error?.response.data.message);
+        return;
+    });
+}

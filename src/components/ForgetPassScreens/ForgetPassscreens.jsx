@@ -11,7 +11,7 @@ const ForgetPassscreens = ({ heading, text, text2, content, value, onChange, onS
       <div className='forget-screens'>
         <div className='forget-screen-content'>
           <img className='logo' src={logo} alt="atiyah-logo" style={{ height: '10rem' }} />
-          <h3 style={{ fontFamily: 'Edu SA Beginner' }}>{heading}</h3>
+          <h3>{heading}</h3>
           <TextField
             className='input-field'
             required
@@ -20,11 +20,10 @@ const ForgetPassscreens = ({ heading, text, text2, content, value, onChange, onS
             value={value}
             onChange={onChange}
             error={false} // You can handle error state outside the component
-            sx={{ fontFamily: 'zilla slab' }}
           />
           <div className='input-field'>{text2}</div>
         </div>
-        <button className='forget-btns' onClick={onSubmit} style={{ fontFamily: 'Edu SA Beginner' }}>{content}</button>
+        <button className='forget-btns' onClick={onSubmit}>{content}</button>
       </div>
       <ToastContainer />
     </div>

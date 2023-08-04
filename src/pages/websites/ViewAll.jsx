@@ -13,9 +13,11 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
 import { NavLink } from 'react-router-dom';
-
+import { ViewAllCampaigns } from '../../request/commonAPIs'
 const ViewAll = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
+    const [campaigns, setCampaigns] = React.useState([]);
+
     const open = Boolean(anchorEl);
 
     const handleClick = (event) => {
@@ -25,73 +27,12 @@ const ViewAll = () => {
         setAnchorEl(null);
     };
 
-    const data = [
-        {
-            images: cardImg,
-            title: "Shaheen",
-            description: "Request for money",
-            rating: "4.9",
-            price: "5000 PKR"
-        },
-        {
-            images: eduImg,
-            title: "Aslam",
-            description: "Request for Education",
-            rating: "4.9",
-            price: "5000 PKR"
-        },
-        {
-            images: bookImg,
-            title: "Shaheen",
-            description: "Request for money",
-            rating: "4.9",
-            price: "5000 PKR"
-        },
-        {
-            images: eduImg,
-            title: "Shaheen",
-            description: "Request for money",
-            rating: "4.9",
-            price: "5000 PKR"
-        },
-        {
-            images: cardImg,
-            title: "Shaheen",
-            description: "Request for money",
-            rating: "4.9",
-            price: "5000 PKR"
-        },
-        {
-            images: cardImg,
-            title: "Shaheen",
-            description: "Request for money",
-            rating: "4.9",
-            price: "5000 PKR"
-        },
-        {
-            images: eduImg,
-            title: "Aslam",
-            description: "Request for Education",
-            rating: "4.8",
-            price: "4000 PKR"
-        },
-        {
-            images: bookImg,
-            title: "Shaheen",
-            description: "Request for book",
-            rating: "4.9",
-        },
-        {
-            images: cardImg,
-            title: "Shaheen",
-            description: "Request for money",
-            rating: "4.5",
-            price: "10000 PKR"
-        }
-    ]
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        ViewAllCampaigns().then((response)=>{
+            setCampaigns(response?.data.campaigns)
+          console.log(response?.data.campaigns)
+        })
     }, []);
 
     return (
@@ -124,9 +65,9 @@ const ViewAll = () => {
 
 
                 </Menu></div>} />
-            <h4 style={{ marginLeft: "30px", marginTop: '2rem', fontFamily: 'Tektur' }}>Choose Campaigns</h4>
+            <h4 style={{ marginLeft: "30px", marginTop: '2rem' }}>Choose Campaigns</h4>
             <div style={{ margin: "30px" }}>
-                <Cards data={data} />
+                <Cards data={campaigns} />
             </div>
             <Footer />
         </div>

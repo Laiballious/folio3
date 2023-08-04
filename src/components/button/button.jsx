@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Button = ({ color, BGcolor, onClick, children, fontSize, width, height }) => {
+const Button = ({ color,BGcolor, onClick, children,fontSize ,width,height}) => {
   const buttonStyle = {
     width: width,
-    height: height,
-    fontSize: fontSize,
+    height:height,
+    fontSize:fontSize,
     backgroundColor: BGcolor,
     padding: '10px 20px',
     borderRadius: '5px',
@@ -15,7 +15,6 @@ const Button = ({ color, BGcolor, onClick, children, fontSize, width, height }) 
     alignItems: "center",
     justifyContent: "center",
     marginRight: '5px',
-    fontFamily: 'Edu SA Beginner'
   };
 
   return (

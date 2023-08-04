@@ -25,7 +25,6 @@ import MyCampaigns from '../pages/receiver/myCampaigns';
 import DonorProfile from '../pages/donor/DonorProfile';
 import AdminProfile from '../pages/admin/AdminProfile';
 import MyDonations from '../pages/donor/myDonations';
-import Profit from '../pages/admin/Profit';
 import { PublicRoute, PrivateRoute } from './authRoutes';
 const AppRoutes = () => {
   return (
@@ -45,7 +44,6 @@ const AppRoutes = () => {
       <Route path="admin" element={<AdminDashboard />} />
       <Route path="admin/donor-list" element={<DonorList />} />
       <Route path="admin/client-list" element={<ClientList />} />
-      <Route path="admin/profit" element={<Profit />} />
       <Route path="admin/profile" element={<AdminProfile />} />
 
       <Route path="upload-campaign" element={<UploadCampaign />} />

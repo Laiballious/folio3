@@ -56,7 +56,7 @@ export default function Footer() {
                         </select>
                     </div>
                     <div>
-                        <h6 style={{fontFamily: 'Playball'}}>©2023 Atiyah Ltd . Privacy . Terms . sidemap</h6>
+                        <h6>©2023 Atiyah Ltd . Privacy . Terms . sidemap</h6>
                     </div>
                     <div className="footer-icon">
                         <img src={Twitter_bw} alt="" className="t-logo" />

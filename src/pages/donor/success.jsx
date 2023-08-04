@@ -39,12 +39,12 @@ export default function ThankYouPage() {
             </div>
 
             {/* Thank you message */}
-            <Typography variant="h3" component="div" gutterBottom style={{ textAlign: 'center', fontWeight: 'bold', marginTop: '2rem', color: 'black', fontFamily: 'Tektur' }}>
+            <Typography variant="h3" component="div" gutterBottom style={{ textAlign: 'center', fontWeight: 'bold', marginTop: '2rem', color: 'black' }}>
               All done, Thank you for helping username!
             </Typography>
 
             {/* Today's Date */}
-            <Typography variant="h5" component="div" gutterBottom style={{ textAlign: 'center', color: 'black', fontFamily: 'Tektur' }}>
+            <Typography variant="h5" component="div" gutterBottom style={{ textAlign: 'center', color: 'black' }}>
               Today's Date: {new Date().toLocaleDateString()}
             </Typography>
 
@@ -52,7 +52,7 @@ export default function ThankYouPage() {
             <Divider style={{ margin: '2rem 0' }} />
 
             {/* Amount Paid */}
-            <Typography variant="h6" component="div" gutterBottom style={{ color: 'black', fontWeight: 'bold', fontFamily: 'Tektur' }}>
+            <Typography variant="h6" component="div" gutterBottom style={{ color: 'black', fontWeight: 'bold' }}>
               Amount Paid: $100
             </Typography>
 
@@ -63,10 +63,10 @@ export default function ThankYouPage() {
             <div style={{ display: 'flex', alignItems: 'center' }}>
               <img src={img} alt="Campaign_description" style={{ marginRight: '20px', width: '150px', height: 'auto' }} />
               <div>
-                <Typography variant="h5" component="div" gutterBottom style={{ color: 'black', fontWeight: 'bold', fontFamily: 'Tektur' }}>
+                <Typography variant="h5" component="div" gutterBottom style={{ color: 'black', fontWeight: 'bold' }}>
                   Title
                 </Typography>
-                <Typography variant="h6" component="div" gutterBottom style={{ color: 'black', fontFamily: 'Tektur' }}>
+                <Typography variant="h6" component="div" gutterBottom style={{ color: 'black' }}>
                   Subtitle
                 </Typography>
               </div>
@@ -76,10 +76,10 @@ export default function ThankYouPage() {
 
         {/* Footer */}
         <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-          <Typography variant="subtitle1" component="div" style={{ color: 'black', fontSize: '0.9rem', fontFamily: 'Playball' }}>
+          <Typography variant="subtitle1" component="div" style={{ color: 'black', fontSize: '0.9rem' }}>
             &copy; {new Date().getFullYear()} AtiyahPK. All rights reserved.
           </Typography>
-          <Typography variant="subtitle1" component="div" style={{ color: 'black', fontSize: '0.9rem', fontFamily: 'Playball' }}>
+          <Typography variant="subtitle1" component="div" style={{ color: 'black', fontSize: '0.9rem' }}>
             Company Address, Karachi, Pakistan
           </Typography>
         </div>

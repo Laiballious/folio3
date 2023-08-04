@@ -5,6 +5,7 @@ const Comment = ({ comments }) => {
   return (
     <>
       {comments.map((item, index) => {
+        console.log(item.userName + " " + item.userImg + " " + "Jello")
         return (
           <div div
             key={index}
@@ -41,7 +42,6 @@ const Comment = ({ comments }) => {
                   cursor: "pointer",
                   display: "block",
                   margin: "0px",
-                  fontFamily: 'Edu SA Beginner'
                 }}
               // onClick={handleNameClick}
               >
@@ -53,7 +53,6 @@ const Comment = ({ comments }) => {
                   color: "#6e6b6a",
                   cursor: "pointer",
                   margin: "0px",
-                  fontFamily: 'Edu SA Beginner'
                 }}
               >
                 {item.text}

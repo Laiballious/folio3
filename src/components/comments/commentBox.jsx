@@ -38,8 +38,8 @@ const CommentBox = () => {
           borderStyle: "solid"
         }}
       >
-        <div style={{ height: '27rem', overflowY: 'auto' }}>
-          <h3 style={{ marginBottom: "20px", fontFamily: 'Cinzel' }}>Comments </h3>
+        <div style={{ height: '27rem', overflowY:'auto' }}>
+          <h3 style={{ marginBottom: "20px" }}>Comments </h3>
           <Comment comments={comments} />
         </div>
 

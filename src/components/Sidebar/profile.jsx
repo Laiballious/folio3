@@ -11,11 +11,13 @@ import './profile.css';
 import { Logout } from '../../request/authAPIS';
 import { useDispatch } from 'react-redux';
 import { logout } from '../../store/authSlice';
+import { useSelector } from 'react-redux';
 const Profile = () => {
 
   const [anchorEl, setAnchorEl] = useState(null);
   const navigate = useNavigate()
   const dispatch = useDispatch()
+  const user = useSelector((state) => state.user.user);   
 
   const handleNameClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -23,7 +25,12 @@ const Profile = () => {
 
   const handleClosePopover = () => {
     setAnchorEl(null);
-    navigate('/receiver/profile')
+    if(user.role === "admin"){
+      navigate('/admin/profile')
+    }else
+    {
+      navigate('/receiver/profile') 
+    }
   };
 
   const handleLogout = () => {
@@ -57,13 +64,13 @@ const Profile = () => {
       </div>
       <div>
         <p
-          style={{ fontSize: '14px', cursor: 'pointer', display: 'block', margin: '0px', fontFamily: 'Zilla Slab' }}
+          style={{ fontSize: '14px', cursor: 'pointer', display: 'block', margin: '0px' }}
           onClick={handleNameClick}
         >
           User Name
         </p>
         <p
-          style={{ fontSize: '12px', color: "#6e6b6a", cursor: 'pointer', margin: '0px', fontFamily: 'Libre Baskerville' }}
+          style={{ fontSize: '12px', color: "#6e6b6a", cursor: 'pointer', margin: '0px' }}
           onClick={handleNameClick}>
           Useremail@gmail.com
         </p>

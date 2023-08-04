@@ -63,8 +63,8 @@ const MyCampaigns = () => {
       <div style={{ flex: "0 0 250px", marginRight: "30px" }}>
         <Sidebar data={data} />
       </div>
-      <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-        <h1 style={{ margin: "30px 0", fontFamily: 'Tektur' }}>Campaigns</h1>
+      <div style={{ margin: "30px", flex: 1, display: "flex", flexDirection: "column" }}>
+        <h1 style={{ marginBottom: "30px" }}>Campaigns</h1>
         {/* Check if campaigns has data before rendering DataTable */}
         {campaigns && campaigns.length > 0 ? (
           <DataTable columns={columns}

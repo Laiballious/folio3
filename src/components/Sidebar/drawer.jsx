@@ -22,7 +22,7 @@ const Sidebar = ({ data }) => {
           style={{ borderRadius: "50%", width: "100%", height: "100%" }}
         />
       </div>
-      <div style={{ fontFamily: 'Playball', width: 220, margin: "0 auto" }}>
+      <div style={{ width: 200, margin: "0 auto" }}>
         {data.map((item, index) => (
           < ListItem
             button
@@ -40,7 +40,7 @@ const Sidebar = ({ data }) => {
               } else if (item.name === 'My Campaigns' || item.name === 'Home') {
                 navigate(`/receiver/${item.path}`)
               }
-              console.log(item.path + " " + item.name + " " + index)
+              console.log(item.path)
             }}
           >
             <ListItemIcon style={{ color: item.color }}>

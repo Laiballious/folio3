@@ -55,13 +55,13 @@ export default function UploadCampaign() {
     });
     const navigate = useNavigate()
     const fileInputRef = useRef(null);
+        
+  const handleFileChange = () => {
+    const file = fileInputRef.current?.files[0];
+    setImage(file);
+  };
 
-    const handleFileChange = () => {
-        const file = fileInputRef.current?.files[0];
-        setImage(file);
-    };
-
-    const user = useSelector((state) => state.user.user);
+    const user = useSelector((state) => state.user.user);   
     const handleFormInputChange = (name) => (event) => {
         const { value } = event.target;
 
@@ -227,7 +227,7 @@ export default function UploadCampaign() {
                             <section className="section1">
                                 <div className="City">
                                     <div className="section1-1">
-                                        <h6 style={{ fontFamily: 'Tektur' }}>Where are you located?</h6>
+                                        <h6>Where are you located?</h6>
                                         <Form>
                                             <Box
                                                 component="form"
@@ -238,7 +238,7 @@ export default function UploadCampaign() {
                                                 autoComplete="off"
                                             >
                                                 <div>
-                                                    <FloatingLabel controlId="outlined-select-city" label="Select your City" className="mb-3" style={{ width: '25rem', fontFamily: 'Edu SA Beginner' }}>
+                                                    <FloatingLabel controlId="outlined-select-city" label="Select your City" className="mb-3" style={{ width: '25rem' }}>
                                                         <Form.Select
                                                             defaultValue="Khi"
                                                             onChange={handleCitySelect}
@@ -252,7 +252,7 @@ export default function UploadCampaign() {
                                                     </FloatingLabel>
                                                 </div>
                                             </Box>
-                                            <FloatingLabel className="mb-3" label="Postal Code" style={{ width: '25rem', fontFamily: 'Edu SA Beginner' }}>
+                                            <FloatingLabel className="mb-3" label="Postal Code" style={{ width: '25rem' }}>
                                                 <Form.Control
                                                     autoComplete="off"
                                                     placeholder="Postal Code"
@@ -265,8 +265,8 @@ export default function UploadCampaign() {
                                     </div>
                                 </div>
                                 <div className="section1-2">
-                                    <h6 style={{ fontFamily: 'Tektur' }}>What best describes why you're fundraising?</h6>
-                                    <div className="Opt" style={{ fontFamily: 'Edu SA Beginner' }}>
+                                    <h6>What best describes why you're fundraising?</h6>
+                                    <div className="Opt">
                                         {options.map((option) => (
                                             <p
                                                 key={option}
@@ -278,7 +278,7 @@ export default function UploadCampaign() {
                                         ))}
                                     </div>
                                 </div>
-                                {error && <div className="error-message" style={{ color: 'red', fontFamily: 'Zilla Slab' }}>{error}</div>}
+                                {error && <div className="error-message" style={{ color: 'red' }}>{error}</div>}
                             </section>
                         </div>
                     </CSSTransition>
@@ -288,18 +288,18 @@ export default function UploadCampaign() {
                     <CSSTransition key={1} classNames="fade" timeout={500}>
                         <div className="section2">
                             <section className="section2">
-                                <h6 style={{ fontFamily: 'Tektur' }}>Who are you fundraising for?</h6>
+                                <h6>Who are you fundraising for?</h6>
                                 <div className={`section2-1 ${isSectionActive("Yourself") ? "activeOption" : ""}`}
-                                    onClick={() => handleSectionActivation("Yourself")} style={{ fontFamily: 'Edu SA Beginner' }}>
+                                    onClick={() => handleSectionActivation("Yourself")} >
                                     <p>Yourself</p> <br />
                                     <p>Funds are delivered to your bank account for your own use</p>
                                 </div>
                                 <div className={`section2-1 ${isSectionActive("Someone else") ? "activeOption" : ""}`}
-                                    onClick={() => handleSectionActivation("Someone else")} style={{ fontFamily: 'Edu SA Beginner' }}>
+                                    onClick={() => handleSectionActivation("Someone else")} >
                                     <p>Someone else</p> <br />
                                     <p>You’ll invite a beneficiary to receive funds or distribute them yourself</p>
                                 </div>
-                                {error && <div className="error-message" style={{ color: 'red', fontFamily: 'Zilla Slab' }}>{error}</div>}
+                                {error && <div className="error-message" style={{ color: 'red' }}>{error}</div>}
                             </section>
                         </div>
                     </CSSTransition>
@@ -309,8 +309,8 @@ export default function UploadCampaign() {
                     <CSSTransition key={2} classNames="fade" timeout={500}>
                         <div className="section3">
                             <section className="section3">
-                                <p style={{ fontFamily: 'Tektur' }}>Amount to be Raised</p>
-                                <FloatingLabel className="mb-3" label="Amount" style={{ width: '25rem', fontFamily: 'Edu SA Beginner' }}>
+                                <p>Amount to be Raised</p>
+                                <FloatingLabel className="mb-3" label="Amount" style={{ width: '25rem' }}>
                                     <Form.Control
                                         id="outlined-basic"
                                         placeholder="Amount"
@@ -330,7 +330,7 @@ export default function UploadCampaign() {
                                         }}
                                     />
                                 </FloatingLabel>
-                                {error && <div className="error-message" style={{ color: 'red', fontFamily: 'Zilla Slab' }}>{error}</div>}
+                                {error && <div className="error-message" style={{ color: 'red' }}>{error}</div>}
                             </section>
                         </div>
                     </CSSTransition>
@@ -340,8 +340,8 @@ export default function UploadCampaign() {
                     <CSSTransition key={3} classNames="fade" timeout={500}>
                         <div className="section4">
                             <section className="section4">
-                                <h6 style={{ fontFamily: 'Tektur' }}>Enter Details about Campaign</h6>
-                                <FloatingLabel label="Campaign Name" style={{ width: '25rem', fontFamily: 'Edu SA Beginner' }}>
+                                <h6>Enter Details about Campaign</h6>
+                                <FloatingLabel label="Campaign Name" style={{ width: '25rem' }}>
                                     <Form.Control
                                         id="outlined-basic"
                                         placeholder="Canmpaign Name"
@@ -350,7 +350,7 @@ export default function UploadCampaign() {
                                         style={{ marginBottom: "1rem" }}
                                     />
                                 </FloatingLabel>
-                                <FloatingLabel className="mb-3" label="Campaign Description" style={{ width: '25rem', fontFamily: 'Edu SA Beginner' }}>
+                                <FloatingLabel className="mb-3" label="Campaign Description" style={{ width: '25rem' }}>
                                     <Form.Control
                                         id="outlined-basic text"
                                         placeholder="Campaign Description"
@@ -360,11 +360,11 @@ export default function UploadCampaign() {
                                     />
                                     <p>Max 50 words</p>
                                     <Form.Group controlId="formFile" className="mb-3">
-                                        <Form.Label><h6 style={{ fontFamily: 'Tektur' }}>Select Image for your Campaign</h6></Form.Label>
+                                        <Form.Label>Select Image for your Campaign</Form.Label>
                                         <Form.Control type="file" accept=".jpg, .jpeg, .png" ref={fileInputRef} onChange={handleFileChange} />
                                     </Form.Group>
                                 </FloatingLabel>
-                                {error && <div className="error-message" style={{ color: 'red', fontFamily: 'Zilla Slab' }}>{error}</div>}
+                                {error && <div className="error-message" style={{ color: 'red' }}>{error}</div>}
                             </section>
                         </div>
                     </CSSTransition >
@@ -374,8 +374,8 @@ export default function UploadCampaign() {
                     <CSSTransition key={4} classNames="fade" timeout={500}>
                         <div className="section5">
                             <section className="section5">
-                                <h6 style={{ fontFamily: 'Tektur' }}>Please enter your Account Details</h6>
-                                <FloatingLabel label="Account Title" style={{ width: '25rem', fontFamily: 'Edu SA Beginner' }}>
+                                <h6>Please enter your Account Details</h6>
+                                <FloatingLabel label="Account Title" style={{ width: '25rem' }}>
                                     <Form.Control
                                         id="outlined-basic"
                                         placeholder="Account Title"
@@ -384,7 +384,7 @@ export default function UploadCampaign() {
                                         style={{ marginBottom: '1rem' }}
                                     />
                                 </FloatingLabel>
-                                <FloatingLabel className="mb-3" label="Account Number" style={{ width: '25rem', fontFamily: 'Edu SA Beginner' }}>
+                                <FloatingLabel className="mb-3" label="Account Number" style={{ width: '25rem' }}>
                                     <Form.Control
                                         id="outlined-basic"
                                         placeholder="Account Number"
@@ -393,7 +393,7 @@ export default function UploadCampaign() {
                                         type="text"
                                     />
                                 </FloatingLabel>
-                                {error && <div className="error-message" style={{ color: 'red', fontFamily: 'Zilla Slab' }}>{error}</div>}
+                                {error && <div className="error-message" style={{ color: 'red' }}>{error}</div>}
                             </section>
                         </div>
                     </CSSTransition>
@@ -444,12 +444,12 @@ export default function UploadCampaign() {
                                         color="inherit"
                                         disabled={activeStep === 0}
                                         onClick={handleBack}
-                                        sx={{ mr: 1, fontFamily: 'Zilla Slab' }}
+                                        sx={{ mr: 1 }}
                                     >
                                         Back
                                     </Button>
                                     <Box sx={{ flex: '1 1 auto' }} />
-                                    <Button onClick={handleNext} sx={{ fontFamily: 'Zilla Slab' }}>
+                                    <Button onClick={handleNext}>
                                         {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
                                     </Button>
                                 </Box>
@@ -458,11 +458,11 @@ export default function UploadCampaign() {
                     </section>
                 </section>
                 <section className="right">
-                    <div className="right-text" style={{ fontFamily: 'Libre Baskerville' }}>
+                    <div className="right-text">
                         Embark on your fundraising journey now!
                     </div>
                 </section>
-            </div >
+            </div>
             <ToastContainer />
         </>
     );

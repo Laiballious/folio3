@@ -18,9 +18,6 @@ import "../../components/Navbar/Navbar.css"
 
 export default function DonorProfile() {
     const user = useSelector(state => state.user.user);
-    console.log(user)
-
-
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
 
@@ -33,44 +30,41 @@ export default function DonorProfile() {
 
 
     return (
-        <div>
             <div>
-                <Navbar
-                    link1={<Link to='/'><Tab label="Home" style={{ color: '#117b34', fontWeight: "bold", marginTop: '10px', fontFamily: 'Cinzel', fontSize: '17px' }} /></Link>}
-                    link2={<Link to='my-donation'><Tab label="My Donation" style={{ color: '#117b34', fontWeight: "bold", marginTop: '10px', fontFamily: 'Cinzel', fontSize: '17px' }} /></Link>}
-                    search={<div><Button
-                        id="profile-icon-hide"
-                        aria-controls={open ? 'fade-menu' : undefined}
-                        aria-haspopup="true"
-                        aria-expanded={open ? 'true' : undefined}
-                        onClick={handleClick}
+                <Navbar style={{ height: "0px" }} link1={<a href='/d-landing'><Tab label="Home" style={{ color: 'black', fontWeight: "bold" }} /></a>} link2={<a href='d-my-donation'><Tab label="My Donation" style={{ color: 'black', fontWeight: "bold" }} /></a>} search={<div><Button
+                    id="profile-icon-hide"
+                    aria-controls={open ? 'fade-menu' : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={open ? 'true' : undefined}
+                    onClick={handleClick}
 
-                    ><img style={{ width: "25px", height: "25px" }} src={profileIcon} alt="profile" /></Button>
-                        <Menu
-                            id="fade-menu"
-                            MenuListProps={{
-                                'aria-labelledby': 'fade-button',
-                            }}
-                            anchorEl={anchorEl}
-                            open={open}
-                            onClose={handleClose}
-                            TransitionComponent={Fade}
-                        >
-                            <NavLink to="/d-profile" style={{ textDecoration: 'none', color: 'inherit' }}>
-                                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                            </NavLink>
+                ><img style={{ width: "25px", height: "25px" }} src={profileIcon} alt="profile" /></Button>
+                    <Menu
+                        id="fade-menu"
+                        MenuListProps={{
+                            'aria-labelledby': 'fade-button',
+                        }}
+                        anchorEl={anchorEl}
+                        open={open}
+                        onClose={handleClose}
+                        TransitionComponent={Fade}
+                    >
+                        <NavLink to="/d-profile" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <MenuItem onClick={handleClose}>Profile</MenuItem>
+                        </NavLink>
 
-                            <NavLink to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-                                <MenuItem style={{ color: "red" }} onClick={handleClose}>Logout</MenuItem>
-                            </NavLink>
+                        <NavLink to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <MenuItem style={{ color: "red" }} onClick={handleClose}>Logout</MenuItem>
+                        </NavLink>
 
 
-                        </Menu></div>} login={<a style={{ position: "relative", bottom: "80px", color: "black" }} href="/d-profile">Profile</a>} signup={<a style={{ position: "relative", bottom: "80px" }} href='/'>Logout</a>} />
-
-            </div>
-            <div>
-                <ProfileSection user={user} />
+                </Menu>
+                </div>} login={<a style={{ position: "relative", bottom: "80px", color: "black" }} href="/donor-profile">Profile</a>} signup={<a style={{ position: "relative", bottom: "80px" }} href='/'>Logout</a>} />
+            < div style={{ display: "flex", justifyContent: "center", alignItems: "center", color: "white", backgroundColor: "#009b36", padding: "50px" }}>
+            <ProfileSection user={user} />
+            
             </div>
         </div>
+            
     )
 }

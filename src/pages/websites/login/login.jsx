@@ -53,7 +53,7 @@ export default function SignIn() {
         Login({ email, password }).then((response) => {
             if (response?.data.success === true) {
                 let user = response.data.user;
-                console.log(user, "user")
+                console.log(user,"user")
                 dispatch(setUser(user));
                 dispatch(loginSuccess());
                 setError('');
@@ -96,8 +96,8 @@ export default function SignIn() {
                                 alignItems: 'center',
                             }}
                         >
-                            <h2 className='hello' style={{ fontFamily: 'Edu SA Beginner' }}>Hello Again!</h2>
-                            <p className='hello2' style={{ fontFamily: 'Edu SA Beginner' }}>Enter your credentials to access your account</p>
+                            <h2 className='hello'>Hello Again!</h2>
+                            <p className='hello2'>Enter your credentials to access your account</p>
                             <div className="third-party">
                                 <div className="google" style={{ cursor: 'pointer' }}>
                                     <img src={googleLogo} alt='Google' />
@@ -110,7 +110,7 @@ export default function SignIn() {
                         <Container component="main" maxWidth="xs" id='box'>
                             <CssBaseline />
                             <Form className="login-form" onSubmit={handleSubmit}>
-                                <FloatingLabel className="mb-3" controlId="formBasicEmail" label="Email Address" style={{ fontFamily: 'Zilla Slab' }}>
+                                <FloatingLabel className="mb-3" controlId="formBasicEmail" label="Email address">
                                     <Form.Control
                                         autoComplete="off"
                                         placeholder="name@example.com"
@@ -119,7 +119,7 @@ export default function SignIn() {
                                         onChange={handleEmailChange}
                                     />
                                 </FloatingLabel>
-                                <FloatingLabel className="mb-3" controlId="formBasicPassword" label="Password" style={{ fontFamily: 'Zilla Slab' }}>
+                                <FloatingLabel className="mb-3" controlId="formBasicPassword" label="Password">
                                     <Form.Control
                                         type="password"
                                         placeholder="Password"
@@ -132,11 +132,10 @@ export default function SignIn() {
                                     control={<Checkbox value="remember" color="primary" />}
                                     label="Remember me"
                                 />
-                                {error && <div className="error-message" style={{ color: 'red', fontFamily: 'Zilla Slab' }}>{error}</div>}
+                                {error && <div className="error-message" style={{ color: 'red' }}>{error}</div>}
                                 <Button
                                     style={{
                                         background: "#117b34",
-                                        fontFamily: 'Zilla Slab'
                                     }}
                                     type="submit"
                                     fullWidth
@@ -148,12 +147,12 @@ export default function SignIn() {
                             </Form>
                             <Grid container>
                                 <Grid item xs>
-                                    <Link to="forget-pass" variant="body2" id='lg-ending' style={{ fontFamily: 'Zilla Slab' }}>
+                                    <Link href="/forget-pass" variant="body2" id='lg-ending'>
                                         Forgot password?
                                     </Link>
                                 </Grid>
                                 <Grid item>
-                                    <NavLink to="/signup" id='signUP' style={{ fontFamily: 'Zilla Slab' }}>
+                                    <NavLink to="/signup" id='signUP'>
                                         {"Don't have an account? Sign Up"}
                                     </NavLink>
                                 </Grid>

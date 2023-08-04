@@ -37,21 +37,21 @@ const Cards = ({ data }) => {
                         <Typography gutterBottom variant="h5" component="div">
                             {item.campaign}
                         </Typography>
-                        <Typography variant="body2" color="text.secondary" style={{fontFamily: 'Playfair Display SC', fontWeight: "bold"}}>
+                        <Typography variant="body2" color="text.secondary">
                             {`${item.description.split(" ").slice(0, 10).join(" ")} ...`}
                         </Typography>
                         <div className="card-btn">
-                            <Button onClick={(e) => handleDonateBtnClick(item._id, e)} BGcolor="#117b34" color="#ffffff" children="Donate Now" fontSize="14px" width="105px" height="30px"/>
-                            <Button onClick={(e) => handleViewDetailsBtnClick(item._id, e)} children="View Details" fontSize="14px" width="105px" height="30px" />
+                            <Button onClick={(e) => handleDonateBtnClick(item._id, e)} BGcolor="#117b34" color="#ffffff" children="Donate Now" fontSize="10px" width="100px" height="30px" />
+                            <Button onClick={(e) => handleViewDetailsBtnClick(item._id, e)} children="View Details" fontSize="10px" width="100px" height="30px" />
                         </div>
                     </CardContent>
                     <CardActions>
                         <div className="card-rating-request">
                             <div className="card-rating">
                                 <img className="star-icon" src={starIcon} alt="icon" />
-                                <h6 className="card-font" style={{marginLeft: '5px', fontFamily: 'Cinzel'}}>{item.endorsement ? item.endorsement : 0}</h6>
+                                <h6 className="card-font">{item.endorsement ? item.endorsement : 0}</h6>
                             </div>
-                            <h6 className="card-font" style={{fontFamily: 'Cinzel'}}>{item.amountNeeded}</h6>
+                            <h6 className="card-font">{item.amountNeeded}</h6>
                         </div>
                     </CardActions>
                 </Card>

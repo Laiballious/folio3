@@ -85,7 +85,7 @@ const ReciverDashboard = () => {
                 alignItems: "center",
               }}
             >
-              <h1 style={{ fontFamily: 'Tektur' }}>Analytics Overview</h1>
+              <h1>Analytics Overview</h1>
             </div>
             <div>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '15px' }}>
@@ -97,7 +97,7 @@ const ReciverDashboard = () => {
                 </Button>
               </div>
               <br />
-              <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+              <div style={{display: 'flex', justifyContent: 'flex-end'}}>
                 <Button BGcolor="#F3F4F6FF" color="#565E6CFF" height="33px" onClick={campaignHandler} style={{ margin: 'auto' }}>
                   <RemoveIcon /> Delete campaign
                 </Button>
@@ -199,7 +199,7 @@ const ReciverDashboard = () => {
           <div style={{ margin: '20px', flex: '1' }}> <CommentBox comments={comments} /> </div>
         </div>
         <div style={{margin: "30px", flex: 1 }}>
-          <h1 style={{ marginBottom: "30px", fontFamily: 'Tektur' }}>Recent Donation</h1>
+          <h1 style={{ marginBottom: "30px" }}>Recent Donation</h1>
           {donation && donation.length > 0 ? (
           <DataTable  columns={columns} 
           rows={donation.map(item => ({
